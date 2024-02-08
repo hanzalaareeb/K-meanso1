@@ -1,0 +1,4 @@
+In this project i leanred a lot about K-means clustering 
+I also tried to to do this model on 3 different features,
+While visualising the result after successfuly running the model
+I encuntered sum problems in next practice I will try to correct those errors
