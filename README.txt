@@ -1,4 +1,4 @@
-//// All libraries used and there versions\\\\
+# All libraries used and there versions
 
 anyio==4.2.0
 argon2-cffi==23.1.0
