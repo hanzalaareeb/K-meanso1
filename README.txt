@@ -1,112 +1,57 @@
-# All libraries used and there versions
+# K-means Clustering Project
 
-anyio==4.2.0
-argon2-cffi==23.1.0
-argon2-cffi-bindings==21.2.0
-arrow==1.3.0
-asttokens==2.4.1
-async-lru==2.0.4
-attrs==23.2.0
-Babel==2.14.0
-beautifulsoup4==4.12.3
-bleach==6.1.0
-certifi==2024.2.2
-cffi==1.16.0
-charset-normalizer==3.3.2
-colorama==0.4.6
-comm==0.2.1
-contourpy==1.2.0
-cycler==0.12.1
-debugpy==1.8.0
-decorator==5.1.1
-defusedxml==0.7.1
-executing==2.0.1
-fastjsonschema==2.19.1
-fonttools==4.48.1
-fqdn==1.5.1
-h11==0.14.0
-httpcore==1.0.2
-httpx==0.26.0
-idna==3.6
-ipykernel==6.29.2
-ipython==8.21.0
-ipywidgets==8.1.1
-isoduration==20.11.0
-jedi==0.19.1
-Jinja2==3.1.3
-json5==0.9.14
-jsonpointer==2.4
-jsonschema==4.21.1
-jsonschema-specifications==2023.12.1
-jupyter==1.0.0
-jupyter-console==6.6.3
-jupyter-events==0.9.0
-jupyter-lsp==2.2.2
-jupyter_client==8.6.0
-jupyter_core==5.7.1
-jupyter_server==2.12.5
-jupyter_server_terminals==0.5.2
-jupyterlab==4.1.0
-jupyterlab-widgets==3.0.9
-jupyterlab_pygments==0.3.0
-jupyterlab_server==2.25.2
-kiwisolver==1.4.5
-MarkupSafe==2.1.5
-matplotlib==3.8.2
-matplotlib-inline==0.1.6
-mistune==3.0.2
-nano==0.10.0
-nbclient==0.9.0
-nbconvert==7.16.0
-nbformat==5.9.2
-nest-asyncio==1.6.0
-notebook==7.0.7
-notebook_shim==0.2.3
-numpy==1.26.4
-overrides==7.7.0
-packaging==23.2
-pandas==2.2.0
-pandocfilters==1.5.1
-parso==0.8.3
-pillow==10.2.0
-platformdirs==4.2.0
-prometheus-client==0.19.0
-prompt-toolkit==3.0.43
-psutil==5.9.8
-pure-eval==0.2.2
-pycparser==2.21
-Pygments==2.17.2
-pyparsing==3.1.1
-python-dateutil==2.8.2
-python-json-logger==2.0.7
-pytz==2024.1
-pywin32==306
-pywinpty==2.0.12
-PyYAML==6.0.1
-pyzmq==25.1.2
-qtconsole==5.5.1
-QtPy==2.4.1
-referencing==0.33.0
-requests==2.31.0
-rfc3339-validator==0.1.4
-rfc3986-validator==0.1.1
-rpds-py==0.17.1
-seaborn==0.13.2
-Send2Trash==1.8.2
-six==1.16.0
-sniffio==1.3.0
-soupsieve==2.5
-stack-data==0.6.3
-terminado==0.18.0
-tinycss2==1.2.1
-tornado==6.4
-traitlets==5.14.1
-types-python-dateutil==2.8.19.20240106
-tzdata==2023.4
-uri-template==1.3.0
-urllib3==2.2.0
-wcwidth==0.2.13
-webcolors==1.13
-webencodings==0.5.1
-websocket-client==1.7.0
-widgetsnbextension==4.0.9
+## Overview
+This project demonstrates the application of K-means clustering algorithm on customer data to segment customers based on their annual income and spending score.
+
+## Dataset
+The dataset used in this project is `Mall_Customers.csv`, which contains the following columns:
+- `CustomerID`: Unique identifier for each customer
+- `Gender`: Gender of the customer
+- `Age`: Age of the customer
+- `Annual Income (k$)`: Annual income of the customer in thousands of dollars
+- `Spending Score (1-100)`: Score assigned by the mall based on customer behavior and spending nature
+
+## Project Structure
+- `Kmean.ipynb`: Jupyter Notebook containing the code for data preprocessing, K-means clustering, and visualization.
+- `Mall_Customers.csv`: The dataset used for clustering.
+
+## Libraries Used
+- `numpy`
+- `matplotlib`
+- `seaborn`
+- `pandas`
+- `sklearn`
+
+## Steps
+1. **Data Loading and Exploration**:
+    - Load the dataset using pandas.
+    - Display the first few rows to understand the structure of the dataset.
+    - Check for missing values and data types.
+
+2. **Data Preprocessing**:
+    - Extract relevant features (Annual Income and Spending Score) for clustering.
+    
+3. **K-means Clustering**:
+    - Apply the K-means algorithm with different numbers of clusters (1 to 10).
+    - Use the Elbow Method to determine the optimal number of clusters by plotting Within-Cluster Sum of Squares (WCSS).
+
+4. **Visualization**:
+    - Visualize the clusters and their centroids on a 2D plot.
+
+## Results
+The optimal number of clusters was determined using the Elbow Method. The final plot shows the segmentation of customers into different clusters based on their annual income and spending score.
+
+## Usage
+1. Ensure all the required libraries are installed:
+    ```bash
+    pip install numpy matplotlib seaborn pandas scikit-learn
+    ```
+2. Run the Jupyter Notebook:
+    ```bash
+    jupyter notebook Kmean.ipynb
+    ```
+
+## References
+- [K-means Clustering Algorithm](https://en.wikipedia.org/wiki/K-means_clustering)
+- [Elbow Method for Optimal Clusters](https://en.wikipedia.org/wiki/Determining_the_number_of_clusters_in_a_data_set#The_Elbow_Method)
+
